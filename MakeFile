@@ -1,1 +1,13 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -g -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wcast-align
+OBJS = main.o
+TARGET = cvisigraph
 
+$(TARGET): main.o
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+main.o:
+	$(CC) $(CFLAGS) -c main.c
+
+clean:
+	rm -f $(TARGET) $(OBJS)
