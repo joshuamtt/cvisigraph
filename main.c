@@ -1,8 +1,7 @@
-#include <stdio.h>
-
-#define RAYGUI_IMPLEMENTATION
 #include "raylib.h"
-#include "./raygui/src/raygui.h"
+// #define RAYGUI_IMPLEMENTATION
+// #include "raygui.h"
+#include <stdio.h>
 
 int main() {
 
@@ -10,8 +9,6 @@ int main() {
 	int window_height = 600;
 
 	InitWindow(window_width, window_height, "CVisiGraph");
-
-	int test = GetTextWidth("test");
 
 	while (!WindowShouldClose()) {
 
